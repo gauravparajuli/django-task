@@ -6,5 +6,5 @@ from django.db import models
 class Employee(models.Model):
     firstname = models.CharField(max_length=255, null=False)
     lastname = models.CharField(max_length=255, null=False)
-    dob = models.DateTimeField(null=False)
+    dob = models.DateField(null=False)
     salary = models.IntegerField(null=False)
