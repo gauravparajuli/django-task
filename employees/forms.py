@@ -7,11 +7,11 @@ class EmployeeForm(forms.ModelForm):
         model = Employee
         exclude = ()
 
-    firstname = forms.CharField(label='', widget=forms.TextInput(
+    firstname = forms.CharField(label='First Name', widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'First Name'}))
-    lastname = forms.CharField(label='', widget=forms.TextInput(
+    lastname = forms.CharField(label='Last Name', widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'Last Name'}))
-    dob = forms.DateField(label='', widget=forms.TextInput(
+    dob = forms.DateField(label='Date of Birth', widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'Date of Birth  (YYYY-MM-DD)'}))
-    salary = forms.IntegerField(label='', widget=forms.TextInput(
+    salary = forms.IntegerField(label='Salary', widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'Salary ($)'}))
