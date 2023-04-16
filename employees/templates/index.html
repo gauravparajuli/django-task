@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+
+<table class="table table-striped table-hover table-bordered" id='customers'>
+    <thead class='table-dark'>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Actions</th>                
+        </tr>
+    </thead>
+    <tbody>
+        <!-- {% if records %}
+            {% for record in records %}
+                <tr>
+                    <td><a href="{% url 'customer' record.id %}">{{record.id}}</a></td>
+                    <td>{{record.firstname}} {{record.lastname}}</td>
+                    <td>{{record.phone}}</td>
+                    <td>{{record.address}}</td>
+                    <td>{{record.city}}</td>
+                    <td>{{record.zipcode}}</td>
+                    <td>{{record.state}}</td>
+                    <td>{{record.created_at}}</td>
+                </tr>
+            {% endfor %}
+        {% endif %} -->
+    </tbody>
+</table>
+
+
+{% endblock %}
+
+{% block js %}
+    <script src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.4/cr-1.6.2/fc-4.2.2/fh-3.3.2/kt-2.8.2/r-2.4.1/rr-1.3.3/sp-2.1.2/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+    $('#customers').DataTable({
+        // "bPaginate": false, //hide pagination
+        // "bFilter": false, //hide Search bar
+        // "bInfo": false, // hide showing entries
+    });
+});
+    </script>
+{% endblock %}
+
+{% block css %}
+    <link href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.4/cr-1.6.2/fc-4.2.2/fh-3.3.2/kt-2.8.2/r-2.4.1/rr-1.3.3/sp-2.1.2/datatables.min.css" rel="stylesheet"/>
+{% endblock %}
