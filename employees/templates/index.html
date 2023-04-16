@@ -20,7 +20,7 @@
                     <td>$ {{record.salary}}</td>
                     <td>
                         <a class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i> Edit</a>
-                        <a class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i> Delete</a>
+                        <a class="btn btn-outline-danger btn-sm" href="{% url 'delete' record.id %}"><i class="bi bi-trash"></i> Delete</a>
                     </td>
                 </tr>
             {% endfor %}
